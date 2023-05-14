@@ -15,7 +15,6 @@ const addorderitems = asyncHandler(async (req, res) => {
         const order = new Order({
             user:req.user._id,
             orderItems,
-
             shippingAddress,
             paymentMethod,
             itemsPrice,
@@ -91,7 +90,7 @@ const GetMyOrders = asyncHandler(async (req, res) => {
 const GetOrders = asyncHandler(async (req, res) => {
     const orders  = await Order.find({}).populate('user','id name')
     res.json(orders)
-    
+       
 })
 //
 

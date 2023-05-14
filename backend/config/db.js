@@ -3,10 +3,9 @@ import colors from 'colors'
 
 const connectDB = async () => {
     try{
-        const conn = await mongose.connect('mongodb+srv://admin:hieuhayquen03@admin.o8rcig9.mongodb.net/test?retryWrites=true&w=majority',{
-            useUnifiedTopology: true,
+        const conn = await mongose.connect('mongodb+srv://admin:hieuhayquen03@admin.o8rcig9.mongodb.net/BTLCNPM?retryWrites=true&w=majority',{
             useNewUrlParser: true,
-            useCreateIndex: true
+            useUnifiedTopology: true,
         })
         console.log(`MongoDB Connected: ${conn.connection.host}`.cyan.underline)
     } catch (error) {
